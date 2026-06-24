@@ -11,7 +11,10 @@ A curated guide to Python tools, data, learning resources, and standards for map
 - [Interactive Maps and Visualization](#interactive-maps-and-visualization)
 - [Spatial Analysis](#spatial-analysis)
 - [OpenStreetMap and Networks](#openstreetmap-and-networks)
+- [Geocoding, Search, and Places](#geocoding-search-and-places)
+- [Routing, Mobility, and Transport](#routing-mobility-and-transport)
 - [Earth Observation and Remote Sensing](#earth-observation-and-remote-sensing)
+- [Climate, Weather, Ocean, and Hydrology](#climate-weather-ocean-and-hydrology)
 - [Cloud-Native Geospatial](#cloud-native-geospatial)
 - [Databases and Big Data](#databases-and-big-data)
 - [Data Engineering and Orchestration](#data-engineering-and-orchestration)
@@ -49,6 +52,8 @@ A curated guide to Python tools, data, learning resources, and standards for map
 - [NumPy](https://numpy.org/) - Core numerical arrays.
 - [pandas](https://pandas.pydata.org/) - Tabular data analysis.
 - [SciPy](https://scipy.org/) - Scientific computing primitives used by many spatial libraries.
+- [Numba](https://numba.pydata.org/) - JIT compilation for accelerating numerical spatial algorithms.
+- [pybind11](https://pybind11.readthedocs.io/) - C++ bindings often used in performance-sensitive geospatial Python packages.
 
 ## Vector Data
 
@@ -64,13 +69,20 @@ A curated guide to Python tools, data, learning resources, and standards for map
 - [morecantile](https://developmentseed.org/morecantile/) - Tile matrix set definitions beyond Web Mercator.
 - [geopy](https://geopy.readthedocs.io/) - Geocoding client library.
 - [timezonefinder](https://github.com/jannikmi/timezonefinder) - Fast timezone lookup from coordinates.
+- [geohash2](https://github.com/dbarthe/geohash) - Geohash encoding and decoding utilities.
+- [python-geohash](https://github.com/hkwi/python-geohash) - Fast geohash operations for Python.
+- [pygeos](https://pygeos.readthedocs.io/) - Vectorized GEOS bindings; functionality was merged into Shapely 2.
+- [geojson](https://github.com/jazzband/geojson) - Python helpers for GeoJSON objects.
+- [TopoJSON](https://github.com/mattijn/topojson) - Convert and work with TopoJSON from Python.
+- [geofileops](https://geofileops.readthedocs.io/) - Batch vector geoprocessing on files using GeoPandas, GDAL, and SQLite.
+- [geocube](https://corteva.github.io/geocube/) - Rasterize vector data into gridded Xarray datasets.
 
 ## Raster and Gridded Data
 
 - [Rasterio](https://rasterio.readthedocs.io/) - Raster I/O and processing.
 - [rioxarray](https://corteva.github.io/rioxarray/stable/) - Rasterio-powered geospatial extension for Xarray.
 - [Xarray](https://docs.xarray.dev/) - Labeled multidimensional arrays.
-- [MetPy](https://arm.columbia.edu/metpy/) - A collection of tools in Python for reading, visualizing, and performing calculations with weather data.
+- [MetPy](https://unidata.github.io/MetPy/latest/) - Tools for reading, visualizing, and calculating with weather data.
 - [Dask](https://docs.dask.org/) - Parallel and out-of-core array/dataframe computation.
 - [Zarr](https://zarr.readthedocs.io/) - Chunked, compressed N-dimensional arrays for cloud and local storage.
 - [rasterstats](https://pythonhosted.org/rasterstats/) - Zonal statistics over raster data.
@@ -80,6 +92,14 @@ A curated guide to Python tools, data, learning resources, and standards for map
 - [rio-mbtiles](https://github.com/mapbox/rio-mbtiles) - Export rasters to MBTiles.
 - [verde](https://www.fatiando.org/verde/latest/) - Processing, gridding, and interpolation for spatial data.
 - [xESMF](https://xesmf.readthedocs.io/) - Regridding for geospatial and climate datasets.
+- [rio-viz](https://github.com/rasterio/rio-viz) - Visualize rasters from the command line and browser.
+- [rio-color](https://github.com/mapbox/rio-color) - Color correction plugin for Rasterio.
+- [rio-hist](https://github.com/mapbox/rio-hist) - Histogram matching plugin for Rasterio.
+- [rio-mucho](https://github.com/mapbox/rio-mucho) - Parallel raster processing with Rasterio.
+- [rio-tiler-pds](https://github.com/developmentseed/rio-tiler-pds) - Tilers for public satellite datasets.
+- [rio-tiler-mosaic](https://github.com/developmentseed/rio-tiler-mosaic) - MosaicJSON support for rio-tiler.
+- [large-image](https://girder.github.io/large_image/) - Tile-based access and visualization for large images, including geospatial rasters.
+- [elevation](https://github.com/bopen/elevation) - Command line and Python tools for acquiring SRTM elevation data.
 
 ## Interactive Maps and Visualization
 
@@ -98,6 +118,10 @@ A curated guide to Python tools, data, learning resources, and standards for map
 - [pydeck](https://deckgl.readthedocs.io/) - Python bindings for deck.gl.
 - [Lonboard](https://developmentseed.org/lonboard/) - Fast interactive maps for GeoPandas, GeoArrow, and large vector datasets.
 - [kepler.gl for Jupyter](https://docs.kepler.gl/docs/keplergl-jupyter) - Visual exploration of large geospatial datasets.
+- [geoplotlib](https://github.com/andrea-cuttone/geoplotlib) - Python toolbox for interactive geographic visualizations.
+- [mplleaflet](https://github.com/jwass/mplleaflet) - Export Matplotlib plots to interactive Leaflet maps.
+- [ipygany](https://github.com/jupyter-widgets-contrib/ipygany) - 3D scientific visualization widgets for Jupyter.
+- [geemap charting](https://geemap.org/) - Earth Engine-backed map widgets and analysis helpers.
 
 ## Spatial Analysis
 
@@ -108,7 +132,7 @@ A curated guide to Python tools, data, learning resources, and standards for map
 - [mgwr](https://pysal.org/notebooks/model/mgwr/intro.html) - Multiscale geographically weighted regression.
 - [segregation](https://pysal.org/segregation/) - Spatial segregation measures.
 - [momepy](https://docs.momepy.org/) - Urban morphology analysis.
-- [PyGeodesy](https://github.com/pypa/geodesy) - Geodetic and geodesic calculations.
+- [PyGeodesy](https://mrjean1.github.io/PyGeodesy/) - Geodetic and geodesic calculations.
 - [MovingPandas](https://movingpandas.org/) - Trajectory data analysis.
 - [scikit-mobility](https://scikit-mobility.github.io/scikit-mobility/) - Human mobility analysis.
 - [Tobler](https://pysal.org/tobler/) - Areal interpolation and dasymetric mapping.
@@ -116,6 +140,14 @@ A curated guide to Python tools, data, learning resources, and standards for map
 - [GSTools](https://geostat-framework.readthedocs.io/projects/gstools/) - Spatial random fields and geostatistical tools.
 - [PyKrige](https://geostat-framework.readthedocs.io/projects/pykrige/) - Kriging interpolation.
 - [scikit-gstat](https://scikit-gstat.readthedocs.io/) - Variogram analysis.
+- [scipy.spatial](https://docs.scipy.org/doc/scipy/reference/spatial.html) - KD-trees, triangulation, Voronoi diagrams, and distance computations.
+- [alphashape](https://alphashape.readthedocs.io/) - Alpha shape concave hull calculations.
+- [pointpats](https://pysal.org/pointpats/) - Point pattern analysis.
+- [spaghetti](https://pysal.org/spaghetti/) - Spatial network analysis.
+- [inequality](https://pysal.org/inequality/) - Spatial inequality measures.
+- [access](https://pysal.org/access/) - Spatial accessibility metrics.
+- [giddy](https://pysal.org/giddy/) - Spatial dynamics and mobility analysis.
+- [spopt](https://pysal.org/spopt/) - Spatial optimization models.
 
 ## OpenStreetMap and Networks
 
@@ -127,6 +159,40 @@ A curated guide to Python tools, data, learning resources, and standards for map
 - [Pandana](https://udst.github.io/pandana/) - Network accessibility analysis.
 - [OSM2Pandas](https://github.com/iamtekson/osm2pandas) - Convert OSM data into pandas/GeoPandas-friendly tables.
 - [OpenRouteService Python](https://openrouteservice-py.readthedocs.io/) - Client for routing, isochrones, and geocoding.
+- [Overpass API Python Wrapper](https://github.com/mvexel/overpass-api-python-wrapper) - Query OpenStreetMap Overpass API from Python.
+- [overpy](https://github.com/DinoTools/python-overpy) - Python client for Overpass API responses.
+- [osm2geojson](https://github.com/aspectumapp/osm2geojson) - Convert OSM JSON/XML to GeoJSON.
+- [osm2pgsql](https://osm2pgsql.org/) - Import OpenStreetMap data into PostgreSQL/PostGIS.
+- [imposm](https://imposm.org/) - Import OpenStreetMap data into PostGIS.
+- [openstreetmap-carto](https://github.com/gravitystorm/openstreetmap-carto) - CartoCSS style used for the standard OpenStreetMap map.
+
+## Geocoding, Search, and Places
+
+- [Nominatim](https://nominatim.org/) - Open-source geocoder powered by OpenStreetMap data.
+- [Photon](https://photon.komoot.io/) - Open-source geocoder built for OpenStreetMap search.
+- [Pelias](https://pelias.io/) - Modular open-source geocoder.
+- [Addok](https://addok.readthedocs.io/) - Geocoding engine focused on address search.
+- [Whoosh](https://whoosh.readthedocs.io/) - Pure-Python search library useful for lightweight place indexes.
+- [Geocoder](https://geocoder.readthedocs.io/) - Unified Python client for multiple geocoding providers.
+- [geopy](https://geopy.readthedocs.io/) - Python client for geocoding services and distance calculations.
+- [OpenAddresses](https://openaddresses.io/) - Open address data from around the world.
+- [WhosOnFirst](https://www.whosonfirst.org/) - Gazetteer and placetype hierarchy for places.
+- [GeoNames](https://www.geonames.org/) - Global geographical names database.
+
+## Routing, Mobility, and Transport
+
+- [Valhalla](https://valhalla.github.io/valhalla/) - Open-source routing engine for cars, bikes, pedestrians, multimodal, and isochrones.
+- [OSRM](https://project-osrm.org/) - High-performance OpenStreetMap routing engine.
+- [GraphHopper](https://www.graphhopper.com/open-source/) - Open-source routing engine with road network and optimization tooling.
+- [OpenTripPlanner](https://www.opentripplanner.org/) - Multimodal trip planning using transit schedules and street networks.
+- [AequilibraE](https://www.aequilibrae.com/latest/python/index.html) - Transport modeling, traffic assignment, and accessibility in Python.
+- [R5](https://github.com/conveyal/r5) - Rapid realistic routing on multimodal transport networks.
+- [r5py](https://r5py.readthedocs.io/) - Python interface to R5 for travel time matrices and accessibility.
+- [GTFS Kit](https://mrcagney.github.io/gtfs_kit_docs/) - Python tools for analyzing GTFS feeds.
+- [Partridge](https://github.com/remix/partridge) - Fast GTFS feed parsing.
+- [transitfeed](https://github.com/google/transitfeed) - Tools for working with GTFS transit data.
+- [MovingPandas](https://movingpandas.org/) - Movement trajectory analytics with GeoPandas.
+- [scikit-mobility](https://scikit-mobility.github.io/scikit-mobility/) - Human mobility metrics, preprocessing, and models.
 
 ## Earth Observation and Remote Sensing
 
@@ -143,6 +209,46 @@ A curated guide to Python tools, data, learning resources, and standards for map
 - [xcube](https://xcube.readthedocs.io/) - Earth observation data cubes.
 - [Open Data Cube](https://www.opendatacube.org/) - Large-scale EO data cube infrastructure.
 - [xarray-sentinel](https://github.com/bopen/xarray-sentinel) - Sentinel data access using Xarray.
+- [landsatxplore](https://github.com/yannforget/landsatxplore) - Search and download Landsat scenes from USGS.
+- [sentinelsat](https://sentinelsat.readthedocs.io/) - Search and download Sentinel satellite images.
+- [eodag](https://eodag.readthedocs.io/) - Search and download Earth observation products from multiple providers.
+- [sat-search](https://github.com/sat-utils/sat-search) - STAC search command line and Python client.
+- [sat-stac](https://github.com/sat-utils/sat-stac) - STAC object helpers.
+- [pyresample](https://pyresample.readthedocs.io/) - Resampling of geospatial image data.
+- [Spectral Python](https://www.spectralpython.net/) - Hyperspectral image processing.
+- [Orfeo ToolBox](https://www.orfeo-toolbox.org/) - Open-source remote sensing image processing toolkit with Python bindings.
+- [SNAPista](https://snap-contrib.github.io/snapista/) - Python interface for ESA SNAP workflows.
+- [pyroSAR](https://pyrosar.readthedocs.io/) - SAR metadata handling, archive management, and processing helpers.
+- [MintPy](https://mintpy.readthedocs.io/) - InSAR time-series analysis.
+- [ISCE2](https://github.com/isce-framework/isce2) - InSAR scientific computing environment.
+- [isce3](https://github.com/isce-framework/isce3) - Modern InSAR processing framework.
+- [OpenDroneMap](https://www.opendronemap.org/) - Open-source photogrammetry for drone imagery, orthomosaics, point clouds, and 3D models.
+
+## Climate, Weather, Ocean, and Hydrology
+
+- [Pangeo](https://pangeo.io/) - Community and software patterns for scalable geoscience analysis.
+- [Project Pythia](https://projectpythia.org/) - Learning resources and cookbooks for geoscience Python.
+- [Iris](https://scitools-iris.readthedocs.io/) - Analysis and visualization of meteorological and oceanographic datasets.
+- [MetPy](https://unidata.github.io/MetPy/latest/) - Meteorological calculations, units, and data parsing.
+- [cf_xarray](https://cf-xarray.readthedocs.io/) - CF Convention-aware Xarray operations.
+- [xclim](https://xclim.readthedocs.io/) - Climate indices and indicators using Xarray.
+- [climpred](https://climpred.readthedocs.io/) - Verification of weather and climate forecasts.
+- [xskillscore](https://xskillscore.readthedocs.io/) - Forecast verification metrics for Xarray objects.
+- [intake-esm](https://intake-esm.readthedocs.io/) - Catalogs for Earth system model data.
+- [xgcm](https://xgcm.readthedocs.io/) - Grid-aware operations for finite-volume model output.
+- [xhistogram](https://xhistogram.readthedocs.io/) - Fast histograms for Xarray and Dask arrays.
+- [xesmf](https://xesmf.readthedocs.io/) - Universal regridding for geospatial datasets.
+- [cfgrib](https://github.com/ecmwf/cfgrib) - GRIB support for Xarray.
+- [Herbie](https://herbie.readthedocs.io/) - Download and open recent and archived weather model output.
+- [Siphon](https://unidata.github.io/siphon/latest/) - Access remote geoscience data services from Python.
+- [Py-ART](https://arm-doe.github.io/pyart/) - Weather radar data analysis.
+- [wradlib](https://docs.wradlib.org/) - Weather radar processing.
+- [HydroMT](https://deltares.github.io/hydromt/latest/) - Build and analyze hydrological and geospatial models.
+- [PyFlwDir](https://deltares.github.io/pyflwdir/latest/) - Fast flow direction and hydrological network operations.
+- [Landlab](https://landlab.readthedocs.io/) - Earth surface process modeling.
+- [FloPy](https://flopy.readthedocs.io/) - Python tools for MODFLOW groundwater models.
+- [PCRaster](https://pcraster.geo.uu.nl/) - Environmental modeling language and Python framework.
+- [PyGMT](https://www.pygmt.org/) - Python interface to the Generic Mapping Tools.
 
 ## Cloud-Native Geospatial
 
@@ -157,6 +263,15 @@ A curated guide to Python tools, data, learning resources, and standards for map
 - [s3fs](https://s3fs.readthedocs.io/) - S3 filesystem interface for Python.
 - [TiTiler](https://developmentseed.org/titiler/) - Dynamic tiling service for COGs and STAC assets.
 - [MosaicJSON](https://developmentseed.org/mosaicjson-spec/) - Specification for mosaics of tiled assets.
+- [stac-fastapi](https://stac-utils.github.io/stac-fastapi/) - Build STAC APIs with FastAPI.
+- [stactools](https://stactools.readthedocs.io/) - Command line and library tools for working with STAC.
+- [stac-validator](https://github.com/stac-utils/stac-validator) - Validate STAC catalogs, collections, and items.
+- [cogeo-mosaic](https://developmentseed.org/cogeo-mosaic/) - Build and use mosaic indexes for Cloud Optimized GeoTIFFs.
+- [cogdumper](https://github.com/developmentseed/cogdumper) - Inspect COG internals.
+- [cogeo-watchbot](https://github.com/developmentseed/cogeo-watchbot) - Serverless COG processing pipelines.
+- [xpublish](https://xpublish.readthedocs.io/) - Publish Xarray datasets through web APIs.
+- [intake](https://intake.readthedocs.io/) - Data cataloging and loading framework.
+- [intake-stac](https://github.com/intake/intake-stac) - Intake plugin for STAC catalogs.
 
 ## Databases and Big Data
 
@@ -170,12 +285,30 @@ A curated guide to Python tools, data, learning resources, and standards for map
 - [GeoParquet](https://geoparquet.org/) - Cloud-friendly columnar vector format.
 - [Ibis](https://ibis-project.org/) - Portable dataframe-style API for SQL engines.
 - [GeoMesa](https://www.geomesa.org/) - Distributed spatiotemporal database tooling.
+- [GeoTrellis](https://geotrellis.io/) - Scala/Spark geospatial raster processing ecosystem with related Python integrations.
+- [GeoPySpark](https://github.com/locationtech-labs/geopyspark) - Python bindings for GeoTrellis on Spark.
+- [RasterFrames](https://rasterframes.io/) - Raster processing on Apache Spark.
+- [GeoWave](https://locationtech.github.io/geowave/) - Distributed geospatial and spatiotemporal indexing.
+- [MobilityDB](https://mobilitydb.com/) - Moving-object and temporal geospatial database built on PostgreSQL and PostGIS.
+- [pgRouting](https://pgrouting.org/) - Routing and network analysis extension for PostgreSQL/PostGIS.
+- [pg_tileserv](https://github.com/CrunchyData/pg_tileserv) - Vector tile server for PostGIS.
+- [pg_featureserv](https://github.com/CrunchyData/pg_featureserv) - Lightweight OGC API Features server for PostGIS.
+- [TimescaleDB](https://www.timescale.com/) - PostgreSQL extension useful for spatiotemporal time-series data with PostGIS.
+- [rasdaman](https://rasdaman.org/) - Array database for multidimensional raster and coverage data.
+- [TileDB](https://tiledb.com/) - Multidimensional array storage engine used for dense and sparse scientific data.
+- [ClickHouse geospatial functions](https://clickhouse.com/docs/en/sql-reference/functions/geo) - Geospatial functions in the open-source columnar database.
+- [Datashader](https://datashader.org/) - Large-scale rasterization and visualization for big spatial data.
 
 ## Data Engineering and Orchestration
 
 - [Apache Airflow](https://airflow.apache.org/) - Platform to programmatically author, schedule and monitor workflows.
 - [Dagster](https://dagster.io/) - Orchestration tool for data assets.
 - [dbt](https://www.getdbt.com/) - Analytics engineering using SQL.
+- [Prefect](https://www.prefect.io/opensource) - Python workflow orchestration for data pipelines.
+- [Kedro](https://kedro.org/) - Data science pipeline framework.
+- [Pooch](https://www.fatiando.org/pooch/latest/) - Data download and cache management for scientific projects.
+- [intake](https://intake.readthedocs.io/) - Lightweight data cataloging and access.
+- [frictionless-py](https://framework.frictionlessdata.io/) - Validate and describe tabular data packages.
 
 ## Machine Learning and GeoAI
 
@@ -192,6 +325,15 @@ A curated guide to Python tools, data, learning resources, and standards for map
 - [Open-CD](https://github.com/likyoo/open-cd) - Change detection toolbox.
 - [TorchSat](https://github.com/sshuair/torchsat) - PyTorch tools for satellite imagery.
 - [DeepForest](https://deepforest.readthedocs.io/) - Tree crown detection from aerial imagery.
+- [MMDetection](https://mmdetection.readthedocs.io/) - Object detection framework often adapted for aerial imagery.
+- [MMSegmentation](https://mmsegmentation.readthedocs.io/) - Semantic segmentation framework used in remote sensing research.
+- [Detectron2](https://detectron2.readthedocs.io/) - Computer vision framework used for aerial object detection and segmentation.
+- [Kornia](https://kornia.readthedocs.io/) - Differentiable computer vision library for PyTorch.
+- [DINOv2](https://github.com/facebookresearch/dinov2) - Self-supervised vision models often used as feature encoders for remote sensing.
+- [Prithvi](https://github.com/NASA-IMPACT/hls-foundation-os) - NASA/IBM open-source geospatial foundation model for Harmonized Landsat Sentinel-2 data.
+- [Clay Foundation Model](https://github.com/Clay-foundation/model) - Open-source Earth observation foundation model.
+- [Terratorch](https://github.com/IBM/terratorch) - Fine-tuning toolkit for geospatial foundation models.
+- [YOLT](https://github.com/CosmiQ/yolt) - Object detection for overhead imagery.
 
 ## 3D, Point Clouds, and Terrain
 
@@ -204,6 +346,16 @@ A curated guide to Python tools, data, learning resources, and standards for map
 - [Whitebox Workflows for Python](https://www.whiteboxgeo.com/manual/wbw-user-manual/book/python_scripting.html) - Terrain, hydrology, and raster/vector geoprocessing.
 - [richdem](https://github.com/r-barnes/richdem) - Terrain analysis and hydrologic processing.
 - [GemGIS](https://gemgis.readthedocs.io/) - Spatial data processing for geomodeling.
+- [OpenDroneMap](https://www.opendronemap.org/) - Photogrammetry toolkit for processing aerial imagery into maps and 3D assets.
+- [WebODM](https://www.opendronemap.org/webodm/) - Browser-based interface for OpenDroneMap workflows.
+- [OpenSfM](https://opensfm.org/) - Structure-from-motion library used in photogrammetry pipelines.
+- [Entwine](https://entwine.io/) - Point cloud indexing and streaming.
+- [Potree](https://potree.org/) - WebGL point cloud renderer.
+- [CloudCompare](https://www.cloudcompare.org/) - Open-source 3D point cloud and mesh processing application.
+- [pyntcloud](https://pyntcloud.readthedocs.io/) - 3D point cloud processing with pandas and NumPy.
+- [trimesh](https://trimesh.org/) - Mesh processing and geometry operations.
+- [gplately](https://gplates.github.io/gplately/) - Plate tectonic reconstruction and analysis in Python.
+- [pyGPlates](https://www.gplates.org/docs/pygplates/) - Python bindings for GPlates plate tectonic reconstruction.
 
 ## Web Maps and APIs
 
@@ -217,6 +369,18 @@ A curated guide to Python tools, data, learning resources, and standards for map
 - [Leaflet](https://leafletjs.com/) - Lightweight interactive web maps.
 - [OpenLayers](https://openlayers.org/) - Feature-rich browser mapping library.
 - [deck.gl](https://deck.gl/) - GPU-accelerated large-scale geospatial visualization.
+- [MapServer](https://mapserver.org/) - Mature open-source platform for publishing spatial data and maps.
+- [GeoServer](https://geoserver.org/) - Open-source server for sharing geospatial data.
+- [pygeoapi](https://pygeoapi.io/) - OGC API server implementation in Python.
+- [GeoNode](https://geonode.org/) - Open-source geospatial content management platform.
+- [MapProxy](https://mapproxy.org/) - Tile cache and proxy for WMS, WMTS, TMS, and other map services.
+- [T-Rex](https://t-rex.tileserver.ch/) - Vector tile server for PostGIS.
+- [TileServer GL](https://tileserver.readthedocs.io/) - Serve vector and raster tiles.
+- [Tileserver-php](https://github.com/maptiler/tileserver-php) - Lightweight server for MBTiles.
+- [Protomaps](https://protomaps.com/) - Open-source PMTiles tooling and web map stack.
+- [OpenMapTiles](https://openmaptiles.org/) - Open-source vector tiles and map schema.
+- [Maputnik](https://maputnik.github.io/) - Visual editor for MapLibre/Mapbox styles.
+- [Tangram](https://tangrams.readthedocs.io/) - WebGL map renderer.
 
 ## Command Line Tools
 
@@ -229,6 +393,14 @@ A curated guide to Python tools, data, learning resources, and standards for map
 - [duckdb](https://duckdb.org/docs/stable/clients/cli/overview.html) - Local analytical SQL, including spatial extension support.
 - [sqlite-utils](https://sqlite-utils.datasette.io/) - CLI and Python tools for SQLite workflows.
 - [datasette](https://datasette.io/) - Publish and explore data, including spatial datasets with plugins.
+- [pmtiles](https://docs.protomaps.com/pmtiles/cli) - Command line tools for PMTiles archives.
+- [planetiler](https://github.com/onthegomap/planetiler) - Build vector tiles from OpenStreetMap and other sources.
+- [tilemaker](https://tilemaker.org/) - Make vector tiles from OpenStreetMap PBF files.
+- [ogr2osm](https://github.com/pnorman/ogr2osm) - Convert OGR-supported formats to OpenStreetMap XML.
+- [geojson-cli](https://github.com/mapbox/geojson-cli) - Command line tools for GeoJSON transformations.
+- [geojsonhint](https://github.com/mapbox/geojsonhint) - Validate GeoJSON from the command line.
+- [ndjson-cli](https://github.com/mbostock/ndjson-cli) - Useful streaming utilities for large GeoJSON/NDJSON workflows.
+- [jq](https://jqlang.github.io/jq/) - JSON processor often used in geospatial data pipelines.
 
 ## Datasets and Data Portals
 
@@ -253,6 +425,33 @@ A curated guide to Python tools, data, learning resources, and standards for map
 - [Global Human Settlement Layer](https://ghsl.jrc.ec.europa.eu/) - Built-up areas, population, and settlement layers.
 - [HydroSHEDS](https://www.hydrosheds.org/) - Hydrological data and watershed products.
 - [SoilGrids](https://soilgrids.org/) - Global soil property maps.
+- [OpenAerialMap](https://openaerialmap.org/) - Open aerial imagery catalog.
+- [OpenHistoricalMap](https://www.openhistoricalmap.org/) - Open historical map data.
+- [OpenRailwayMap](https://www.openrailwaymap.org/) - Railway infrastructure map based on OpenStreetMap.
+- [Daylight Map Distribution](https://daylightmap.org/) - Validated OpenStreetMap distribution.
+- [Overture Maps](https://overturemaps.org/) - Open map data for places, buildings, transportation, and boundaries.
+- [Source Cooperative](https://source.coop/) - Cloud-native open geospatial data exchange.
+- [STAC Index](https://stacindex.org/) - Searchable index of STAC catalogs and tools.
+- [Radiant MLHub](https://mlhub.earth/) - Open Earth observation training datasets.
+- [SpaceNet](https://spacenet.ai/datasets/) - Open satellite imagery datasets for ML challenges.
+- [xView](https://xviewdataset.org/) - Large-scale overhead imagery object detection dataset.
+- [BigEarthNet](https://bigearth.net/) - Sentinel-2 benchmark archive for remote sensing ML.
+- [SEN12MS](https://mediatum.ub.tum.de/1474000) - Sentinel-1/2 multisensor dataset with land-cover labels.
+- [Chesapeake Bay Land Cover](https://lila.science/datasets/chesapeakelandcover) - High-resolution land cover dataset.
+- [ESA WorldCover](https://esa-worldcover.org/) - Global land cover products.
+- [Dynamic World](https://dynamicworld.app/) - Near-real-time global land cover probabilities.
+- [Copernicus DEM](https://spacedata.copernicus.eu/collections/copernicus-digital-elevation-model) - Global digital elevation model.
+- [MERIT Hydro](https://hydro.iis.u-tokyo.ac.jp/~yamadai/MERIT_Hydro/) - Global hydrography data.
+- [FABDEM](https://data.bris.ac.uk/data/dataset/s5hqmjcdj8yo2ibzi9b4ew3sn) - Forest and buildings removed global DEM.
+- [JRC Global Surface Water](https://global-surface-water.appspot.com/) - Global surface water occurrence and change.
+- [OpenLandMap](https://openlandmap.org/) - Environmental layers and soil property maps.
+- [Natural Earth Vector](https://github.com/nvkelso/natural-earth-vector) - Natural Earth vector source repository.
+- [TIGER/Line Shapefiles](https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html) - U.S. Census Bureau geographic boundary files.
+- [US Census Cartographic Boundary Files](https://www.census.gov/geographies/mapping-files/time-series/geo/cartographic-boundary.html) - Simplified U.S. boundaries for mapping.
+- [Bureau of Transportation Statistics Geospatial Data](https://geodata.bts.gov/) - U.S. transportation geospatial datasets.
+- [OpenAQ](https://openaq.org/) - Open air quality data.
+- [GBIF](https://www.gbif.org/) - Global biodiversity occurrence data.
+- [iNaturalist Open Data](https://www.inaturalist.org/pages/developers) - Biodiversity observations and media metadata.
 
 ## Learning Resources
 
@@ -270,6 +469,14 @@ A curated guide to Python tools, data, learning resources, and standards for map
 - [Xarray Tutorials](https://tutorial.xarray.dev/) - Tutorials for labeled multidimensional data.
 - [Dask Tutorial](https://tutorial.dask.org/) - Scalable Python workflows.
 - [STAC Tutorials](https://stacspec.org/en/tutorials/) - Learn the SpatioTemporal Asset Catalog ecosystem.
+- [Pangeo Gallery](https://gallery.pangeo.io/) - Reproducible examples for scalable geoscience workflows.
+- [Project Pythia Cookbooks](https://cookbooks.projectpythia.org/) - Community geoscience Python recipes.
+- [The Carpentries Geospatial Lessons](https://carpentries-incubator.github.io/geospatial-python/) - Introductory geospatial Python lessons.
+- [QGIS Training Manual](https://docs.qgis.org/latest/en/docs/training_manual/) - Practical open-source GIS concepts and workflows.
+- [PostGIS Introduction](https://postgis.net/workshops/postgis-intro/) - Hands-on spatial SQL tutorial.
+- [MapLibre Examples](https://maplibre.org/maplibre-gl-js/docs/examples/) - Web map examples using MapLibre GL JS.
+- [OpenStreetMap Wiki](https://wiki.openstreetmap.org/) - Documentation for OSM tagging, data model, and tooling.
+- [NASA Earthdata Tutorials](https://www.earthdata.nasa.gov/learn) - Earthdata learning resources and recipes.
 
 ## Standards and Formats
 
@@ -290,6 +497,16 @@ A curated guide to Python tools, data, learning resources, and standards for map
 - [WMS](https://www.ogc.org/standard/wms/) - Web Map Service.
 - [WFS](https://www.ogc.org/standard/wfs/) - Web Feature Service.
 - [OGC API Features](https://ogcapi.ogc.org/features/) - Modern web API standard for feature data.
+- [OGC API Tiles](https://ogcapi.ogc.org/tiles/) - Standard for tiled geospatial resources.
+- [OGC API Coverages](https://ogcapi.ogc.org/coverages/) - Standard for coverage data APIs.
+- [WMTS](https://www.ogc.org/standard/wmts/) - Web Map Tile Service.
+- [TMS](https://wiki.osgeo.org/wiki/Tile_Map_Service_Specification) - Tile Map Service specification.
+- [MBTiles](https://github.com/mapbox/mbtiles-spec) - SQLite-based tile archive format.
+- [LAS](https://www.asprs.org/divisions-committees/lidar-division/laser-las-file-format-exchange-activities) - ASPRS LiDAR point cloud exchange format.
+- [EPT](https://entwine.io/entwine-point-tile.html) - Entwine Point Tile format for streaming point clouds.
+- [GTFS](https://gtfs.org/) - General Transit Feed Specification.
+- [GTFS Realtime](https://gtfs.org/documentation/realtime/reference/) - Realtime transit updates.
+- [OpenAPI](https://www.openapis.org/) - API description standard used by many OGC API implementations.
 
 ## Communities and News
 
@@ -303,6 +520,12 @@ A curated guide to Python tools, data, learning resources, and standards for map
 - [r/gis](https://www.reddit.com/r/gis/) - GIS community discussion.
 - [This Week in OpenStreetMap](https://weeklyosm.eu/) - OSM news roundup.
 - [MapScaping Podcast](https://mapscaping.com/podcast/) - Geospatial industry interviews and technical discussions.
+- [CUGOS](https://cugos.org/) - Cascadia Users of Geospatial Open Source.
+- [GeoHipster](https://geohipster.com/) - Interviews and commentary from the geospatial community.
+- [OpenCage Geomob](https://thegeomob.com/) - Geospatial meetups, talks, and podcast.
+- [OpenStreetMap US](https://openstreetmap.us/) - U.S. OpenStreetMap community and events.
+- [HOT OpenStreetMap Team](https://www.hotosm.org/) - Humanitarian mapping community.
+- [Spatial Data Science Conference](https://spatial-data-science-conference.com/) - Spatial analytics and data science conference.
 
 ## Contributing
 
@@ -312,4 +535,3 @@ Suggestions are welcome. Good additions should be:
 - Actively maintained, widely used, or uniquely valuable.
 - Linked to official documentation, a stable project page, or a well-maintained repository.
 - Described with one concise sentence.
-
